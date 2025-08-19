@@ -7,8 +7,14 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
+        body {
+            background: url(img/pagina_Web.jpg);
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: white;
+        }
         .hero {
-			font-family: Georgia, 'Times New Roman', Times, serif;
+            font-family: Georgia, 'Times New Roman', Times, serif;
             background: url('https://via.placeholder.com/1920x700') no-repeat center center/cover;
             color: rgb(0, 0, 0);
             padding: 150px 0;
@@ -17,9 +23,11 @@
         .hero h1 {
             font-size: 3rem;
             font-weight: bold;
+            color: white;
         }
         .hero p {
             font-size: 1.3rem;
+            color: white;
         }
         .servicio-img {
             height: 200px;
@@ -32,14 +40,61 @@
             padding: 20px 0;
             text-align: center;
         }
+        .servicio-img {
+            height: 216px;
+            width: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        .servicio1-img {
+            height: 200px;
+            width: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .user-status {
+            background: rgba(40, 167, 69, 0.9);
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+            display: none;
+        }
+        
+        .logout-btn {
+            background: rgba(255,255,255,0.2);
+            color: white;
+            padding: 8px 16px;
+            border: 1px solid rgba(255,255,255,0.3);
+            border-radius: 20px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-left: 1rem;
+        }
+        
+        .logout-btn:hover {
+            background: rgba(255,255,255,0.3);
+        }
+        
+        .card a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
     </style>
 </head>
 <body>
 
-<!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
-        <a class="navbar-brand" href="#">Mi Negocio</a>
+        <a class="navbar-brand" href="#inicio">Mi Negocio</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -49,12 +104,14 @@
                 <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
                 <li class="nav-item"><a class="nav-link" href="#registro">Registro</a></li>
                 <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                <li class="nav-item" id="user-nav" style="display: none;">
+                    <span class="navbar-text" id="user-greeting">Hola, Usuario</span>
+                </li>
             </ul>
         </div>
     </div>
 </nav>
 
-<!-- Hero -->
 <section id="inicio" class="hero">
     <div class="container">
         <h1>Bienvenido a Mi Negocio</h1>
@@ -63,7 +120,6 @@
     </div>
 </section>
 
-<!-- Servicios -->
 <section id="servicios" class="py-5">
     <div class="container">
         <div class="text-center mb-5">
@@ -72,30 +128,35 @@
         </div>
         <div class="row g-4">
             <div class="col-md-4">
-                <div class="card shadow-sm">
-                    <img src="https://via.placeholder.com/400x200" class="card-img-top servicio-img" alt="Servicio 1">
+                <div id="servicio" class="card shadow-sm h-100">
+                    <img src="img/h,c,j.png" class="card-img-top servicio1-img" alt="HTML, CSS y JavaScript">
                     <div class="card-body">
-                        
-                        <h5 class="card-title"><a href="html/javascript.html">Servicio 1</a></h5>
-                        <p class="card-text">Descripción breve del servicio que brindamos para ayudarte a alcanzar tus metas.</p>
+                        <h5 class="card-title">
+                            <a href="#" onclick="navigateToService('html-css-js')" class="text-decoration-none">HTML, CSS y JavaScript</a>
+                        </h5>
+                        <p class="card-text">Creamos páginas modernas y responsivas con HTML, CSS y JavaScript, ofreciendo diseño atractivo, funcionalidad e interactividad para tu negocio o proyecto.</p>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card shadow-sm">
-                    <img src="https://via.placeholder.com/400x200" class="card-img-top servicio-img" alt="Servicio 2">
+                <div class="card shadow-sm h-100">
+                    <img src="img/bootstrap.png" class="card-img-top servicio-img" alt="Bootstrap">
                     <div class="card-body">
-                        <h5 class="card-title">Servicio 2</h5>
-                        <p class="card-text">Detalle de nuestro segundo servicio estrella que te hará la vida más fácil.</p>
+                        <h5 class="card-title">
+                            <a href="#" onclick="navigateToService('bootstrap')" class="text-decoration-none">Bootstrap</a>
+                        </h5>
+                        <p class="card-text">Desarrollamos páginas web rápidas, modernas y responsivas utilizando Bootstrap, garantizando un diseño profesional adaptable a cualquier dispositivo.</p>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card shadow-sm">
-                    <img src="https://via.placeholder.com/400x200" class="card-img-top servicio-img" alt="Servicio 3">
+                <div class="card shadow-sm h-100">
+                    <img src="img/base.jpg" class="card-img-top servicio-img" alt="Base de Datos">
                     <div class="card-body">
-                        <h5 class="card-title">Servicio 3</h5>
-                        <p class="card-text">Descripción atractiva para motivar a tus clientes a elegir este servicio.</p>
+                        <h5 class="card-title">
+                            <a href="#" onclick="navigateToService('database')" class="text-decoration-none">Base de Datos</a>
+                        </h5>
+                        <p class="card-text">Creamos y administramos bases de datos seguras y optimizadas, asegurando el correcto almacenamiento y manejo de la información de tu proyecto.</p>
                     </div>
                 </div>
             </div>
@@ -103,31 +164,38 @@
     </div>
 </section>
 
-<!-- Registro -->
 <section id="registro" class="bg-light py-5">
     <div class="container">
-        <div class="text-center mb-4">
-            <h2 class="fw-bold">Regístrate para conocer más</h2>
-            <p>Completa el formulario y recibe acceso a todo nuestro catálogo</p>
+        <!-- User Status Display -->
+        <div class="user-status" id="user-status">
+            <h4>¡Bienvenido de vuelta!</h4>
+            <p id="user-info"></p>
+            <button class="logout-btn" onclick="logoutUser()">Cambiar usuario</button>
         </div>
-        <form class="row g-3 justify-content-center">
-            <div class="col-md-4">
-                <input type="text" class="form-control" placeholder="Nombre completo" required>
+        
+        <div class="registration-form" id="registration-form">
+            <div class="text-center mb-4">
+                <h2 class="fw-bold text-dark">Regístrate para conocer más</h2>
+                <p class="text-dark">Completa el formulario y recibe acceso a todo nuestro catálogo</p>
             </div>
-            <div class="col-md-4">
-                <input type="email" class="form-control" placeholder="Correo electrónico" required>
-            </div>
-            <div class="col-md-4">
-                <input type="tel" class="form-control" placeholder="Teléfono" required>
-            </div>
-            <div class="col-md-12 text-center">
-                <button type="submit" class="btn btn-primary btn-lg">Registrarme</button>
-            </div>
-        </form>
+            <form class="row g-3 justify-content-center" id="main-registration-form">
+                <div class="col-md-4">
+                    <input type="text" class="form-control" id="nombre" placeholder="Nombre completo" required>
+                </div>
+                <div class="col-md-4">
+                    <input type="email" class="form-control" id="email" placeholder="Correo electrónico" required>
+                </div>
+                <div class="col-md-4">
+                    <input type="tel" class="form-control" id="telefono" placeholder="Teléfono" required>
+                </div>
+                <div class="col-md-12 text-center">
+                    <button type="submit" class="btn btn-primary btn-lg">Registrarme</button>
+                </div>
+            </form>
+        </div>
     </div>
 </section>
 
-<!-- Contacto -->
 <section id="contacto" class="py-5">
     <div class="container">
         <div class="text-center mb-4">
@@ -138,12 +206,141 @@
     </div>
 </section>
 
-<!-- Footer -->
 <footer>
     <p>&copy; 2025 Mi Negocio. Todos los derechos reservados.</p>
 </footer>
 
-<!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+let currentUser = null;
+
+window.addEventListener('load', function() {
+    checkUserStatus();
+});
+
+function checkUserStatus() {
+    const userData = sessionStorage.getItem('userData');
+    if (userData) {
+        currentUser = JSON.parse(userData);
+        showUserStatus();
+    }
+}
+
+function showUserStatus() {
+    if (currentUser) {
+        const userStatus = document.getElementById('user-status');
+        const userInfo = document.getElementById('user-info');
+        const userNav = document.getElementById('user-nav');
+        const userGreeting = document.getElementById('user-greeting');
+        const registrationForm = document.getElementById('registration-form');
+        
+        userStatus.style.display = 'block';
+        userInfo.textContent = `${currentUser.nombre} (${currentUser.email})`;
+        userNav.style.display = 'block';
+        userGreeting.textContent = `Hola, ${currentUser.nombre}`;
+        registrationForm.style.display = 'none';
+    }
+}
+
+function hideUserStatus() {
+    const userStatus = document.getElementById('user-status');
+    const userNav = document.getElementById('user-nav');
+    const registrationForm = document.getElementById('registration-form');
+    
+    userStatus.style.display = 'none';
+    userNav.style.display = 'none';
+    registrationForm.style.display = 'block';
+}
+
+function logoutUser() {
+    currentUser = null;
+    sessionStorage.removeItem('userData');
+    hideUserStatus();
+
+    const form = document.getElementById('main-registration-form');
+    form.reset();
+    
+    alert('Has cerrado sesión exitosamente.');
+}
+
+document.getElementById('main-registration-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const nombre = document.getElementById('nombre').value;
+    const email = document.getElementById('email').value;
+    const telefono = document.getElementById('telefono').value;
+    
+    if (!nombre || !email || !telefono) {
+        alert('Por favor, completa todos los campos.');
+        return;
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+        alert('Por favor, ingresa un correo electrónico válido.');
+        return;
+    }
+
+    const userData = {
+        nombre: nombre,
+        email: email,
+        telefono: telefono,
+        registrationDate: new Date().toISOString()
+    };
+    
+    currentUser = userData;
+    sessionStorage.setItem('userData', JSON.stringify(userData));
+    
+    alert(`¡Bienvenido, ${nombre}! Te has registrado exitosamente. Ahora puedes acceder a todos nuestros servicios sin volver a registrarte.`);
+    
+    
+    showUserStatus();
+});
+
+function navigateToService(serviceType) {
+    if (!currentUser) {
+        alert('Por favor, regístrate primero para acceder a nuestros servicios.');
+        document.getElementById('registro').scrollIntoView({ behavior: 'smooth' });
+        return;
+    }
+
+    sessionStorage.setItem('selectedService', serviceType);
+    
+    switch(serviceType) {
+        case 'html-css-js':
+            openServicePage('HTML, CSS y JavaScript');
+            break;
+        case 'bootstrap':
+            openServicePage('Bootstrap');
+            break;
+        case 'database':
+            openServicePage('Base de Datos');
+            break;
+    }
+}
+
+function openServicePage(serviceName) {
+    alert(`Redirigiendo a la página de ${serviceName}...\n\nEn la implementación real, esto abriría la página correspondiente donde no necesitarás registrarte nuevamente.`);
+}
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            const headerOffset = 80;
+            const elementPosition = target.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
+        }
+    });
+});
+</script>
+
 </body>
 </html>
