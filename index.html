@@ -294,7 +294,6 @@ document.getElementById('main-registration-form').addEventListener('submit', fun
     
     alert(`¡Bienvenido, ${nombre}! Te has registrado exitosamente. Ahora puedes acceder a todos nuestros servicios sin volver a registrarte.`);
     
-    
     showUserStatus();
 });
 
@@ -309,19 +308,15 @@ function navigateToService(serviceType) {
     
     switch(serviceType) {
         case 'html-css-js':
-            openServicePage('HTML, CSS y JavaScript');
+            window.location.href = "pages/pagina1.html";
             break;
         case 'bootstrap':
-            openServicePage('Bootstrap');
+            window.location.href = "pages/pagina2.html";
             break;
         case 'database':
-            openServicePage('Base de Datos');
+            window.location.href = "pages/pagina3.html";
             break;
     }
-}
-
-function openServicePage(serviceName) {
-    alert(`Redirigiendo a la página de ${serviceName}...\n\nEn la implementación real, esto abriría la página correspondiente donde no necesitarás registrarte nuevamente.`);
 }
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {

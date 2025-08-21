@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -90,8 +91,13 @@
         }
 
         @keyframes float {
-            0% { transform: translateX(-50%) translateY(-50%) rotate(0deg); }
-            100% { transform: translateX(-50%) translateY(-50%) rotate(360deg); }
+            0% {
+                transform: translateX(-50%) translateY(-50%) rotate(0deg);
+            }
+
+            100% {
+                transform: translateX(-50%) translateY(-50%) rotate(360deg);
+            }
         }
 
         .hero-content {
@@ -142,6 +148,7 @@
                 opacity: 0;
                 transform: translateY(30px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -177,7 +184,7 @@
             background: white;
             padding: 2rem;
             border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             position: relative;
             overflow: hidden;
@@ -195,7 +202,7 @@
 
         .service-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
         }
 
         .service-icon {
@@ -287,7 +294,7 @@
         .contact-form {
             max-width: 600px;
             margin: 0 auto;
-            background: rgba(255,255,255,0.1);
+            background: rgba(255, 255, 255, 0.1);
             padding: 2rem;
             border-radius: 15px;
             backdrop-filter: blur(10px);
@@ -297,7 +304,7 @@
             max-width: 600px;
             margin: 0 auto 2rem;
             padding: 1rem 2rem;
-            background: rgba(255,255,255,0.1);
+            background: rgba(255, 255, 255, 0.1);
             border-radius: 10px;
             backdrop-filter: blur(10px);
             text-align: center;
@@ -309,10 +316,10 @@
         }
 
         .logout-btn {
-            background: rgba(255,255,255,0.2);
+            background: rgba(255, 255, 255, 0.2);
             color: white;
             padding: 8px 16px;
-            border: 1px solid rgba(255,255,255,0.3);
+            border: 1px solid rgba(255, 255, 255, 0.3);
             border-radius: 20px;
             font-size: 0.9rem;
             cursor: pointer;
@@ -321,7 +328,7 @@
         }
 
         .logout-btn:hover {
-            background: rgba(255,255,255,0.3);
+            background: rgba(255, 255, 255, 0.3);
         }
 
         .form-group {
@@ -340,7 +347,7 @@
             padding: 12px;
             border: none;
             border-radius: 8px;
-            background: rgba(255,255,255,0.9);
+            background: rgba(255, 255, 255, 0.9);
             color: #333;
             font-size: 1rem;
         }
@@ -373,6 +380,18 @@
             color: white;
             text-align: center;
             padding: 2rem 0;
+        }
+
+        .home-link {
+            font-size: 1.5rem;
+            margin-left: 1rem;
+            text-decoration: none;
+            color: white;
+            transition: color 0.3s ease;
+        }
+
+        .home-link:hover {
+            color: #ffd700;
         }
 
         @media (max-width: 768px) {
@@ -410,10 +429,12 @@
         }
     </style>
 </head>
+
 <body>
     <header class="header">
         <div class="nav-container">
             <div class="logo">Web de Html, Css y JavaScript</div>
+            <a href="../index.html" class="home-link" title="Volver al inicio">🏠</a>
             <nav>
                 <ul class="nav-menu" id="nav-menu">
                     <li><a href="#inicio">Inicio</a></li>
@@ -429,7 +450,8 @@
     <section class="hero" id="inicio">
         <div class="hero-content">
             <h1>Desarrollo Web Profesional</h1>
-            <p>Creamos páginas web modernas y funcionales con HTML, CSS y JavaScript. Sitios responsivos, rápidos y optimizados para tu éxito digital.</p>
+            <p>Creamos páginas web modernas y funcionales con HTML, CSS y JavaScript. Sitios responsivos, rápidos y
+                optimizados para tu éxito digital.</p>
             <a href="#contacto" class="cta-button">Solicita tu Cotización</a>
         </div>
     </section>
@@ -442,7 +464,8 @@
                     <span class="service-icon">🎨</span>
                     <h3>Landing Page</h3>
                     <div class="service-price">Desde $299</div>
-                    <p>Página única optimizada para conversiones, perfecta para promocionar un producto o servicio específico.</p>
+                    <p>Página única optimizada para conversiones, perfecta para promocionar un producto o servicio
+                        específico.</p>
                     <ul class="service-features">
                         <li>Diseño responsivo</li>
                         <li>Optimización SEO básica</li>
@@ -490,8 +513,10 @@
             <div class="about-content">
                 <div class="about-text">
                     <h2>¿Por qué elegir nuestros servicios?</h2>
-                    <p>Somos especialistas en desarrollo web con HTML, CSS y JavaScript puro. Nos enfocamos en crear sitios web rápidos, seguros y optimizados que realmente funcionen para tu negocio.</p>
-                    <p>Con años de experiencia en el desarrollo web, garantizamos código limpio, diseños modernos y una experiencia de usuario excepcional en todos los dispositivos.</p>
+                    <p>Somos especialistas en desarrollo web con HTML, CSS y JavaScript puro. Nos enfocamos en crear
+                        sitios web rápidos, seguros y optimizados que realmente funcionen para tu negocio.</p>
+                    <p>Con años de experiencia en el desarrollo web, garantizamos código limpio, diseños modernos y una
+                        experiencia de usuario excepcional en todos los dispositivos.</p>
                     <div class="skills">
                         <span class="skill-tag">HTML5</span>
                         <span class="skill-tag">CSS3</span>
@@ -502,7 +527,8 @@
                     </div>
                 </div>
                 <div class="about-visual">
-                    <div style="background: linear-gradient(45deg, #667eea, #764ba2); height: 300px; border-radius: 15px; display: flex; align-items: center; justify-content: center; color: white; font-size: 4rem;">
+                    <div
+                        style="background: linear-gradient(45deg, #667eea, #764ba2); height: 300px; border-radius: 15px; display: flex; align-items: center; justify-content: center; color: white; font-size: 4rem;">
                         &lt;/&gt;
                     </div>
                 </div>
@@ -513,7 +539,7 @@
     <section class="contact" id="contacto">
         <div class="container">
             <h2 class="section-title">Contáctanos</h2>
-            
+
             <div class="user-status" id="user-status" style="display: none;">
                 <div id="welcome-msg" class="welcome-message" style="display: none;">
                     <h3>¡Bienvenido de vuelta!</h3>
@@ -538,7 +564,8 @@
                     </div>
                     <div class="form-group">
                         <label for="service">Servicio de Interés</label>
-                        <select id="service" name="service" style="width: 100%; padding: 12px; border: none; border-radius: 8px; background: rgba(255,255,255,0.9); color: #333; font-size: 1rem;">
+                        <select id="service" name="service"
+                            style="width: 100%; padding: 12px; border: none; border-radius: 8px; background: rgba(255,255,255,0.9); color: #333; font-size: 1rem;">
                             <option value="">Selecciona un servicio</option>
                             <option value="landing">Landing Page</option>
                             <option value="corporate">Sitio Web Corporativo</option>
@@ -548,7 +575,8 @@
                     </div>
                     <div class="form-group">
                         <label for="message">Mensaje</label>
-                        <textarea id="message" name="message" placeholder="Cuéntanos sobre tu proyecto..." required></textarea>
+                        <textarea id="message" name="message" placeholder="Cuéntanos sobre tu proyecto..."
+                            required></textarea>
                     </div>
                     <button type="submit" class="submit-btn">Enviar Mensaje</button>
                 </form>
@@ -558,7 +586,8 @@
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 WebDev Pro. Todos los derechos reservados. | Desarrollo web profesional con HTML, CSS y JavaScript</p>
+            <p>&copy; 2025 WebDev Pro. Todos los derechos reservados. | Desarrollo web profesional con HTML, CSS y
+                JavaScript</p>
         </div>
     </footer>
 
@@ -577,7 +606,7 @@
             const userStatus = document.getElementById('user-status');
             const welcomeMsg = document.getElementById('welcome-msg');
             const userInfo = document.getElementById('user-info');
-            
+
             userStatus.style.display = 'block';
             welcomeMsg.style.display = 'block';
             userInfo.textContent = `${currentUser.name} (${currentUser.email})`;
@@ -591,13 +620,13 @@
 
         function saveUserData(userData) {
             const existingUserIndex = registeredUsers.findIndex(user => user.email === userData.email);
-            
+
             if (existingUserIndex === -1) {
                 registeredUsers.push(userData);
             } else {
                 registeredUsers[existingUserIndex] = userData;
             }
-            
+
             currentUser = userData;
             sessionStorage.setItem('registeredUsers', JSON.stringify(registeredUsers));
             sessionStorage.setItem('currentUser', JSON.stringify(currentUser));
@@ -607,18 +636,18 @@
         function logoutUser() {
             currentUser = null;
             sessionStorage.removeItem('currentUser');
-            
+
 
             const userStatus = document.getElementById('user-status');
             const welcomeMsg = document.getElementById('welcome-msg');
             const form = document.getElementById('contact-form');
-            
+
             userStatus.style.display = 'none';
             welcomeMsg.style.display = 'none';
             form.reset();
         };
 
-        window.addEventListener('load', function() {
+        window.addEventListener('load', function () {
             checkUserStatus();
             document.body.style.opacity = '1';
             document.body.style.transform = 'translateY(0)';
@@ -644,7 +673,7 @@
                         top: offsetPosition,
                         behavior: 'smooth'
                     });
-                    
+
                     navMenu.classList.remove('active');
                 }
             });
@@ -661,7 +690,7 @@
             }
         });
 
-        document.getElementById('contact-form').addEventListener('submit', function(e) {
+        document.getElementById('contact-form').addEventListener('submit', function (e) {
             e.preventDefault();
 
             const formData = new FormData(this);
@@ -684,21 +713,21 @@
                 phone: data.phone,
                 registrationDate: new Date().toISOString()
             };
-            
+
             saveUserData(userData);
-            
+
             const submitBtn = document.querySelector('.submit-btn');
             const originalText = submitBtn.textContent;
-            
+
             submitBtn.textContent = 'Enviando...';
             submitBtn.disabled = true;
-            
+
             setTimeout(() => {
 
-                const isReturningUser = registeredUsers.some(user => 
+                const isReturningUser = registeredUsers.some(user =>
                     user.email === data.email && user.registrationDate !== userData.registrationDate
                 );
-                
+
                 if (isReturningUser) {
                     alert(`¡Hola de nuevo, ${data.name}! Gracias por contactarnos otra vez. Te responderemos pronto.`);
                 } else {
@@ -707,9 +736,9 @@
 
                 document.getElementById('message').value = '';
                 document.getElementById('service').value = '';
-                
+
                 showWelcomeMessage();
-                
+
                 submitBtn.textContent = originalText;
                 submitBtn.disabled = false;
             }, 2000);
@@ -720,7 +749,7 @@
             rootMargin: '0px 0px -50px 0px'
         };
 
-        const observer = new IntersectionObserver(function(entries) {
+        const observer = new IntersectionObserver(function (entries) {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.style.opacity = '1';
@@ -736,20 +765,21 @@
             observer.observe(card);
         });
 
-        window.addEventListener('load', function() {
+        window.addEventListener('load', function () {
             document.body.style.opacity = '1';
             document.body.style.transform = 'translateY(0)';
         });
 
         document.querySelectorAll('.service-card').forEach(card => {
-            card.addEventListener('mouseenter', function() {
+            card.addEventListener('mouseenter', function () {
                 this.style.transform = 'translateY(-10px) scale(1.02)';
             });
-            
-            card.addEventListener('mouseleave', function() {
+
+            card.addEventListener('mouseleave', function () {
                 this.style.transform = 'translateY(0) scale(1)';
             });
         });
     </script>
 </body>
+
 </html>
